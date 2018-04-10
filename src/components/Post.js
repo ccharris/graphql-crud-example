@@ -10,6 +10,7 @@ export default class Post extends Component {
 
     return (
       <Link className="no-underline ma1" to={`/post/${this.props.post.id}`}>
+      <img src={this.props.post.imageUrl} width='300px' alt='main'/>
         <h2 className="f3 black-80 fw4 lh-solid">{title}</h2>
         <p className="black-80 fw3">{this.props.post.text}</p>
       </Link>

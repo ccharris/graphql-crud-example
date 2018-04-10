@@ -84,7 +84,7 @@ class CreatePage extends Component {
 export default withRouter(CreatePage)
 
 const CREATE_DRAFT_MUTATION = gql`
-  mutation CreateDraftMutation($title: String!, $text: String!, $imageUrl: String!) {
+  mutation CreateDraft($title: String!, $text: String!, $imageUrl: String!) {
     createDraft(title: $title, text: $text, imageUrl: $imageUrl) {
       id
       title

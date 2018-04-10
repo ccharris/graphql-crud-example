@@ -26,7 +26,7 @@ export default class FeedPage extends Component {
 
           return (
             <Fragment>
-              <h1>Feed</h1>
+              <h1>My Posts</h1>
               {data.feed &&
                 data.feed.map(post => (
                   <Post
@@ -52,6 +52,7 @@ export const FEED_QUERY = gql`
       text
       title
       isPublished
+      imageUrl
     }
   }
 `

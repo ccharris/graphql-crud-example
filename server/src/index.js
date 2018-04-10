@@ -14,9 +14,9 @@ const resolvers = {
     },
   },
   Mutation: {
-    createDraft(parent, { title, text }, ctx, info) {
+    createDraft(parent, { title, text, imageUrl }, ctx, info) {
       return ctx.db.mutation.createPost(
-        { data: { title, text, isPublished: false } },
+        { data: { title, text, imageUrl, isPublished: false } },
         info,
       )
     },

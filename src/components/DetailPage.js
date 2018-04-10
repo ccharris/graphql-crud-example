@@ -5,7 +5,6 @@ import { Query, Mutation } from 'react-apollo'
 import { DRAFTS_QUERY } from './DraftsPage'
 import { FEED_QUERY } from './FeedPage'
 
-
 class DetailPage extends Component {
   render() {
     return (
@@ -31,6 +30,7 @@ class DetailPage extends Component {
           const action = this._renderAction(post)
           return (
             <Fragment>
+              <img src={data.post.imageUrl} alt='main' width='300px' />
               <h1 className="f3 black-80 fw4 lh-solid">{data.post.title}</h1>
               <p className="black-80 fw3">{data.post.text}</p>
               {action}
@@ -136,6 +136,7 @@ const POST_QUERY = gql`
       title
       text
       isPublished
+      imageUrl
     }
   }
 `
