@@ -1,0 +1,8 @@
+type Post {
+  id: ID! @unique
+  isPublished: Boolean!
+  imageUrl: String!
+  title: String!
+  text: String!
+}
+

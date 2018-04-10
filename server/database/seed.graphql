@@ -1,0 +1,10 @@
+mutation {
+  createPost(data: {
+    title: "Hello World from the GraphQL server!"
+    text: "👋"
+    isPublished: false
+    imageUrl: "https://umnaja.ru/wp-content/uploads/2018/03/4-ways-cheer-up-depressed-cat.jpg"
+  }) {
+    id
+  }
+}
